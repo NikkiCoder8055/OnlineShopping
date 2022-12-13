@@ -36,8 +36,8 @@ public class AdminLogin {
 				rs.getString("Pass");
 				System.out.println("Login Successful...!");
 				
-				ViewProductAdmin ViewProductAdmin = new ViewProductAdmin();
-				ViewProductAdmin.getProductDetailsAdmin();
+//				ViewProductAdmin ViewProductAdmin = new ViewProductAdmin();
+//				ViewProductAdmin.getProductDetailsAdmin();
 
 			} else {
 				System.out.println("Wrong input Added please Check..!");

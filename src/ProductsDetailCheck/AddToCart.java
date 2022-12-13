@@ -84,9 +84,11 @@ public class AddToCart {
 //			        	  System.out.println("stock of :"+temp4); 
 					} else {
 						try {
+							System.err.println("Stock is Not Availabe");
 							throw new Message("Stock is Not Availabe");
 						} catch (Exception e) {
-							e.printStackTrace();
+//							e.printStackTrace();
+							System.out.println(e);
 						}
 					}
 				}
@@ -122,7 +124,8 @@ public class AddToCart {
 		try {
 			Scanner sc5 = new Scanner(System.in);
 			System.out.print("Your Products Are ");
-			prs = con.prepareStatement("update AddTocart1 set AddToCart1.Price = ? where Prod_Id = 1;");
+			
+			prs = con.prepareStatement("update addtocart set addtocart.Price = ? where Prod_Id = 1;");
 			prs.setInt(1, result);
 
 			int i = prs.executeUpdate();
@@ -140,7 +143,7 @@ public class AddToCart {
 		try {
 			DBCon obj2 = new DBCon();
 			con = obj2.getConnection();
-			prs = con.prepareStatement("select Price from AddToCart1 where Prod_Id = 1");
+			prs = con.prepareStatement("select Price from addtocart where Prod_Id = 1");
 			ResultSet rs6 = prs.executeQuery();
 			while (rs6.next()) {
 				System.out.println("Your Cart Amount Is: " + rs6.getInt("Price"));
@@ -157,10 +160,10 @@ public class AddToCart {
 		try {
 			DBCon obj2 = new DBCon();
 			con = obj2.getConnection();
-			prs = con.prepareStatement("update AddTocart1 set AddToCart1.Price = 0 where Prod_Id = 1");
+			prs = con.prepareStatement("update addtocart set addtocart.Price = 0 where Prod_Id = 1");
 			int i = prs.executeUpdate();
 			System.out.println("Cart is Empty Successfully " + i);
-			prs = con.prepareStatement("select Price from AddToCart1 where Prod_Id = 1");
+			prs = con.prepareStatement("select Price from addtocart where Prod_Id = 1");
 			ResultSet rs6 = prs.executeQuery();
 			while (rs6.next()) {
 				System.out.println("Your Cart Amount Is: " + rs6.getInt("Price"));

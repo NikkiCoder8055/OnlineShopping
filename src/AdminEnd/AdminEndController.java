@@ -12,46 +12,10 @@ public class AdminEndController {
 		
 	
 	}
-	
-	
-	public void AdminController() {
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-	}
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
 
 	public static void main(String[] args) {
-		
+		AdminEndController AdminEndController = new AdminEndController();
+		AdminEndController.getAdminControllerAdmin();
 
 	}
 

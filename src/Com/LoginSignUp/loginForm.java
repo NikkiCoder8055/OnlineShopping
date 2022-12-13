@@ -37,11 +37,12 @@ public class loginForm {
 				obj4.getProductDetails();
 
 			} else {
-				System.out.println("Wrong input Added please Check..!");
-				System.out.println("You Recorrect your Password and Email press1:");
-//				------------------------------------------------------
+				
+				System.out.println("Wrong input..!");
+
+				System.out.println("PRESS 1:IF YOU WANT TO RE-ENTER EMAIL AND PASSWORD ");
 				Scanner sc1 = new Scanner(System.in);
-				System.out.println("if You Don't Register Yet Then Register first for that press2:");
+				System.out.println("PRESS 2:IF YOU NOT REGISTERED YET THEN GO AND REGISTER FIRST");
 				int input = sc1.nextInt();
 
 				switch (input) {

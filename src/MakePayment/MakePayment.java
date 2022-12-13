@@ -18,7 +18,7 @@ public class MakePayment extends AddToCart {
 		try {
 			DBCon obj2 = new DBCon();
 			con = obj2.getConnection();
-			prs = con.prepareStatement("select Price from AddToCart1 where Prod_Id = 1");
+			prs = con.prepareStatement("select Price from addtocart where Prod_Id = 1");
 			ResultSet rs6 = prs.executeQuery();
 			while (rs6.next()) {
 				System.out.println("Your Payable Amount is: " + rs6.getInt("Price"));

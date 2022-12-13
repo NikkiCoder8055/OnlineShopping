@@ -8,10 +8,11 @@ import MakePayment.MakePayment;
 public class ProductController {
 
 	public void getProductController() {
-		Scanner sc = new Scanner(System.in);
+		
 		System.out.println("Choose The Option Below: ----->");
 		System.out.println("To Buys The Product You Need To Add Them Into Cart First:  ");
 		System.out.println("Press 1:" + "BUY AND ADD TO CART: ");
+		Scanner sc = new Scanner(System.in);
 		int choice3 = sc.nextInt();
 		switch (choice3) {
 		case 1:
@@ -56,6 +57,8 @@ public class ProductController {
 			    loginForm obj3 = new loginForm();
 		        obj3.getLoginDetail();
 		        break;
+		case 0:   System.out.println("Press 0: for exit");
+			 break;
 		}
 
 	}
